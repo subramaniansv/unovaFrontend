@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@400;500&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  /* Adding custom color variables for easier re-use */
+  :root {
+    --primary-color: #3B82F6;  
+    --secondary-color: #9B4DFF; 
+    --background-color: #0F172A; 
+  }
+}
+
+@layer utilities {
+  
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+
+
+  .text-gradient {
+    background-image: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+ 
+  .text-hero {
+    font-size: 4rem;  
+  }
+
+  .text-subhero {
+    font-size: 2.5rem; 
+  }
+}
+
