@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => {
+      {['Home', 'About', 'Service', 'Portfolio', 'Contact'].map((label, index) => {
         const path = label.toLowerCase() === 'home' ? '/' : `/${label.toLowerCase()}`;
         return (
           <li key={index} className="relative group" onClick={closeMenu}>

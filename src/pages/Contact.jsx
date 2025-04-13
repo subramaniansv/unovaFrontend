@@ -28,12 +28,12 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const apiUrl = import.meta.env.REACT_APP_BACKEND_URL;
     const { name, email, phone, message } = formData;
     const payload = { name, email, phone, message };
 
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", payload);
+      const res = await axios.post(`${apiUrl}/api/contact`, payload);
       
       // Success toast
       toast.success("Message sent successfully!", {
