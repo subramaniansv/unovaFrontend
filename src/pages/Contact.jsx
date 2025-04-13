@@ -10,48 +10,7 @@ import { Helmet } from 'react-helmet';
 const Contact = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
-  }, []);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const apiUrl = import.meta.env.REACT_APP_BACKEND_URL;
-    const { name, email, phone, message } = formData;
-    const payload = { name, email, phone, message };
-
-    try {
-      const res = await axios.post(`${apiUrl}/api/contact`, payload);
-      
-      // Success toast
-      toast.success("Message sent successfully!", {
-       
-        autoClose: 3000,
-      });
-
-      // Clear the form after submission
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    } catch (err) {
-      // Error toast
-      toast.error("Something went wrong! Please try again later.", {
-      
-        autoClose: 3000,
-      });
-    }
-  };
-
+  }, []); 
   return (
     <>
     <Helmet>
@@ -71,7 +30,8 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {/* Contact Form */}
           <form
-            onSubmit={handleSubmit}
+          method="POST"
+            action="https://formspree.io/f/xpwanzwy"
             className="space-y-6 bg-gray-900 p-8 rounded-xl shadow-lg"
             data-aos="fade-right"
           >
@@ -80,8 +40,7 @@ const Contact = () => {
               name="name"
               placeholder="Your Name*"
               required
-              value={formData.name}
-              onChange={handleChange}
+            
               className="w-full px-4 py-3 bg-gray-800 text-white rounded-md focus:outline-none"
             />
             <input
@@ -89,16 +48,14 @@ const Contact = () => {
               name="email"
               placeholder="Your Email*"
               required
-              value={formData.email}
-              onChange={handleChange}
+             
               className="w-full px-4 py-3 bg-gray-800 text-white rounded-md focus:outline-none"
             />
             <input
               type="text"
               name="phone"
               placeholder="Your Phone (optional)"
-              value={formData.phone}
-              onChange={handleChange}
+           
               className="w-full px-4 py-3 bg-gray-800 text-white rounded-md focus:outline-none"
             />
             <textarea
@@ -106,8 +63,7 @@ const Contact = () => {
               placeholder="Your Message*"
               rows="5"
               required
-              value={formData.message}
-              onChange={handleChange}
+             
               className="w-full px-4 py-3 bg-gray-800 text-white rounded-md focus:outline-none"
             ></textarea>
             <button
