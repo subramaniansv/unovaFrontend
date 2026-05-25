@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian Realty — Your Gateway to Premium Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="logo">
+          <span class="logo-mark">M</span>
+          <span class="logo-text">MERIDIAN <em>REALTY</em></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="#contact" class="btn-consult">Free Consultation</a>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <span class="hero-eyebrow">Tirunelveli's Premier Property Consultancy</span>
+          <h1>Find Your<br>Perfect <em>Property.</em><br>Build Your<br>Dream Life.</h1>
+          <p class="hero-sub">From luxury villas and premium apartments to commercial spaces and investment plots — Meridian Realty opens the door to your ideal property with expertise, integrity and a personalised approach.</p>
+          <div class="hero-actions">
+            <a href="#properties" class="btn-gold">Explore Properties</a>
+            <a href="#contact" class="btn-ghost-white">Talk to an Expert</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-search-card">
+            <p class="hsc-label">Quick Property Search</p>
+            <div class="hsc-fields">
+              <div class="hsc-field">
+                <label>Property Type</label>
+                <select>
+                  <option>All Types</option>
+                  <option>Residential Villa</option>
+                  <option>Apartment</option>
+                  <option>Commercial Space</option>
+                  <option>Plot / Land</option>
+                </select>
+              </div>
+              <div class="hsc-field">
+                <label>Location</label>
+                <select>
+                  <option>All Locations</option>
+                  <option>Tirunelveli Town</option>
+                  <option>Palayamkottai</option>
+                  <option>Nanguneri</option>
+                  <option>Ambasamudram</option>
+                </select>
+              </div>
+              <div class="hsc-field">
+                <label>Budget Range</label>
+                <select>
+                  <option>Any Budget</option>
+                  <option>Under ₹50 Lakhs</option>
+                  <option>₹50L – ₹1 Crore</option>
+                  <option>₹1 Cr – ₹2 Crore</option>
+                  <option>Above ₹2 Crore</option>
+                </select>
+              </div>
+            </div>
+            <a href="#properties" class="btn-search">Search Properties →</a>
+          </div>
+          <div class="hero-badge-col">
+            <div class="hbadge">
+              <strong>850<span>+</span></strong>
+              <span>Properties Sold</span>
+            </div>
+            <div class="hbadge">
+              <strong>₹480<span>Cr+</span></strong>
+              <span>In Transactions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-label">↓ Scroll to Explore</div>
+  </section>
+
+  <!-- ═══ STATS BAR ═══ -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <strong>850+</strong>
+          <span>Properties Sold</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item">
+          <strong>₹480 Cr+</strong>
+          <span>Total Transactions</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item">
+          <strong>1,200+</strong>
+          <span>Happy Clients</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item">
+          <strong>12 Yrs</strong>
+          <span>Market Experience</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item">
+          <strong>4.9 ★</strong>
+          <span>Client Rating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FEATURED PROPERTIES ═══ -->
+  <section class="section" id="properties">
+    <div class="container">
+      <div class="sec-row">
+        <div class="sec-left">
+          <span class="sec-label">Featured Listings</span>
+          <h2>Premium Properties<br><em>Handpicked for You</em></h2>
+        </div>
+        <div class="sec-right">
+          <p class="sec-desc">Our curated listings represent the finest residential, commercial and investment opportunities across Tirunelveli and surrounding districts — each verified and ready for viewing.</p>
+          <div class="prop-filters">
+            <button class="pf-btn active" onclick="filterProps(this,'all')">All</button>
+            <button class="pf-btn" onclick="filterProps(this,'villa')">Villas</button>
+            <button class="pf-btn" onclick="filterProps(this,'apt')">Apartments</button>
+            <button class="pf-btn" onclick="filterProps(this,'comm')">Commercial</button>
+          </div>
+        </div>
+      </div>
+      <div class="prop-grid" id="propGrid">
+
+        <div class="prop-card" data-type="villa">
+          <div class="pc-img-wrap">
+            <div class="prop-img pi1"></div>
+            <span class="prop-badge pb-feat">Featured</span>
+            <span class="prop-type">Villa</span>
+          </div>
+          <div class="prop-body">
+            <h3>Casa Veranda</h3>
+            <p class="prop-loc">Tirunelveli Town</p>
+            <p class="prop-desc">Elegant 4 BHK villa with private garden, modular kitchen and premium marble interiors. Gated community with 24/7 security.</p>
+            <div class="prop-specs">
+              <span>4 BHK</span>
+              <span>3 Baths</span>
+              <span>3,800 sq ft</span>
+            </div>
+            <div class="prop-foot">
+              <span class="prop-price">₹2.8 Crore</span>
+              <a href="#contact" class="btn-prop">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card" data-type="apt">
+          <div class="pc-img-wrap">
+            <div class="prop-img pi2"></div>
+            <span class="prop-badge pb-new">New Launch</span>
+            <span class="prop-type">Apartment</span>
+          </div>
+          <div class="prop-body">
+            <h3>The Skyline Residences</h3>
+            <p class="prop-loc">Palayamkottai</p>
+            <p class="prop-desc">Modern 3 BHK apartments with city views, rooftop amenities, clubhouse, gym and swimming pool. RERA approved.</p>
+            <div class="prop-specs">
+              <span>3 BHK</span>
+              <span>2 Baths</span>
+              <span>1,650 sq ft</span>
+            </div>
+            <div class="prop-foot">
+              <span class="prop-price">₹85 Lakhs</span>
+              <a href="#contact" class="btn-prop">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card" data-type="villa">
+          <div class="pc-img-wrap">
+            <div class="prop-img pi3"></div>
+            <span class="prop-type">Villa</span>
+          </div>
+          <div class="prop-body">
+            <h3>Palm Court Villas</h3>
+            <p class="prop-loc">Nanguneri</p>
+            <p class="prop-desc">Spacious 3 BHK independent villa with terrace garden and covered car park. Premium location with excellent connectivity.</p>
+            <div class="prop-specs">
+              <span>3 BHK</span>
+              <span>2 Baths</span>
+              <span>2,400 sq ft</span>
+            </div>
+            <div class="prop-foot">
+              <span class="prop-price">₹1.6 Crore</span>
+              <a href="#contact" class="btn-prop">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card" data-type="apt">
+          <div class="pc-img-wrap">
+            <div class="prop-img pi4"></div>
+            <span class="prop-badge pb-sale">Price Drop</span>
+            <span class="prop-type">Apartment</span>
+          </div>
+          <div class="prop-body">
+            <h3>Meridian Towers</h3>
+            <p class="prop-loc">Tirunelveli Town</p>
+            <p class="prop-desc">Well-designed 2 BHK apartment in a prime location. Open car parking, 24/7 water supply, power backup. Move-in ready.</p>
+            <div class="prop-specs">
+              <span>2 BHK</span>
+              <span>2 Baths</span>
+              <span>1,100 sq ft</span>
+            </div>
+            <div class="prop-foot">
+              <span class="prop-price">₹62 Lakhs</span>
+              <a href="#contact" class="btn-prop">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card" data-type="comm">
+          <div class="pc-img-wrap">
+            <div class="prop-img pi5"></div>
+            <span class="prop-badge pb-feat">Prime Location</span>
+            <span class="prop-type">Commercial</span>
+          </div>
+          <div class="prop-body">
+            <h3>Commerce Park — Offices</h3>
+            <p class="prop-loc">Palayamkottai</p>
+            <p class="prop-desc">Premium Grade A office spaces ranging from 800 to 5,000 sq ft. High-speed internet infrastructure, covered parking, 24/7 security.</p>
+            <div class="prop-specs">
+              <span>Office Space</span>
+              <span>800–5,000 sq ft</span>
+              <span>Covered Parking</span>
+            </div>
+            <div class="prop-foot">
+              <span class="prop-price">From ₹45 L</span>
+              <a href="#contact" class="btn-prop">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card" data-type="villa">
+          <div class="pc-img-wrap">
+            <div class="prop-img pi6"></div>
+            <span class="prop-type">Plot</span>
+          </div>
+          <div class="prop-body">
+            <h3>Green Acres — Residential Plots</h3>
+            <p class="prop-loc">Ambasamudram</p>
+            <p class="prop-desc">DTCP-approved residential plots in a planned layout with underground drainage, tar roads and street lighting. Ideal investment.</p>
+            <div class="prop-specs">
+              <span>1,200–3,000 sq ft</span>
+              <span>DTCP Approved</span>
+              <span>East Facing</span>
+            </div>
+            <div class="prop-foot">
+              <span class="prop-price">From ₹18 L</span>
+              <a href="#contact" class="btn-prop">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="section section-off" id="services">
+    <div class="container">
+      <div class="sec-head-c">
+        <span class="sec-label">What We Do</span>
+        <h2>Full-Spectrum <em>Property Services</em></h2>
+        <p>We manage every aspect of your property journey — from discovery to documentation — so you can focus on what matters most.</p>
+      </div>
+      <div class="svc-grid">
+
+        <div class="svc-block">
+          <div class="svc-num">01</div>
+          <h3>Residential Sales & Purchase</h3>
+          <p>Expert guidance through every step of buying or selling your home — market valuation, negotiation, legal review and smooth closing.</p>
+          <ul>
+            <li>Free property valuation</li>
+            <li>Comparative market analysis</li>
+            <li>Buyer-seller matchmaking</li>
+            <li>Negotiation & deal closure</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <div class="svc-num">02</div>
+          <h3>Commercial Properties</h3>
+          <p>Identifying and securing the right commercial space — office, retail, warehouse or industrial — to grow your business with confidence.</p>
+          <ul>
+            <li>Location scouting & analysis</li>
+            <li>Commercial lease review</li>
+            <li>Office park partnerships</li>
+            <li>Zoning & compliance guidance</li>
+          </ul>
+        </div>
+
+        <div class="svc-block svc-featured">
+          <span class="svc-chip">Most Popular</span>
+          <div class="svc-num">03</div>
+          <h3>Investment Advisory</h3>
+          <p>Data-driven property investment strategies — identifying high-yield opportunities, growth corridors and portfolio diversification for long-term wealth creation.</p>
+          <ul>
+            <li>Investment portfolio planning</li>
+            <li>ROI & yield projections</li>
+            <li>Growth corridor identification</li>
+            <li>NRI investment assistance</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <div class="svc-num">04</div>
+          <h3>Rental Management</h3>
+          <p>End-to-end rental management for landlords and tenants — from tenant screening and agreement drafting to maintenance coordination.</p>
+          <ul>
+            <li>Tenant background verification</li>
+            <li>Rental agreement drafting</li>
+            <li>Rent collection management</li>
+            <li>Property maintenance co-ordination</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <div class="svc-num">05</div>
+          <h3>Legal & Documentation</h3>
+          <p>Comprehensive legal assistance ensuring clean titles, proper registration and all statutory compliance — protecting your investment at every step.</p>
+          <ul>
+            <li>Title verification & due diligence</li>
+            <li>Sale deed & agreement drafting</li>
+            <li>Registration & stamp duty guidance</li>
+            <li>Encumbrance certificate assistance</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <div class="svc-num">06</div>
+          <h3>Interior Consultation</h3>
+          <p>Connect with our partner interior designers to transform your new space — from space planning and mood boards to full turnkey execution.</p>
+          <ul>
+            <li>Space planning & 3D visualisation</li>
+            <li>Material & furniture sourcing</li>
+            <li>Modular kitchen & wardrobe design</li>
+            <li>Full turnkey project management</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY CHOOSE US ═══ -->
+  <section class="section section-dark" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left">
+          <span class="sec-label-light">Why Meridian Realty</span>
+          <h2>12 Years of Building<br><em>Trust & Wealth</em></h2>
+          <p>We're not just property consultants — we're your long-term real estate partners. Our clients return to us for every transaction because they know that our integrity and expertise never compromise on their best interests.</p>
+          <p>Meridian Realty was founded in 2013 with a mission to bring transparency, expertise and personalised service to the Tirunelveli property market — a mission we honour with every transaction.</p>
+          <div class="about-awards">
+            <div class="award-item">
+              <strong>Best Realty Firm</strong>
+              <span>Tirunelveli Business Awards 2024</span>
+            </div>
+            <div class="award-item">
+              <strong>RERA Certified</strong>
+              <span>Registered & Compliant</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="why-grid">
+            <div class="why-item">
+              <div class="wi-icon"><svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h4>Transparent Dealings</h4>
+              <p>No hidden charges, no ambiguous clauses. Every transaction is documented clearly and explained fully before any commitment.</p>
+            </div>
+            <div class="why-item">
+              <div class="wi-icon"><svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h4>Verified Listings Only</h4>
+              <p>Every property in our portfolio is personally verified for legal clarity, title purity and accurate documentation before listing.</p>
+            </div>
+            <div class="why-item">
+              <div class="wi-icon"><svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h4>End-to-End Support</h4>
+              <p>From the first site visit to final registration — our team is with you at every step, ensuring a smooth and stress-free experience.</p>
+            </div>
+            <div class="why-item">
+              <div class="wi-icon"><svg viewBox="0 0 24 24" fill="none" width="22" height="22"><circle cx="12" cy="11" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 16.95l1.42 1.42M2 11h2M20 11h2M4.22 17.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+              <h4>Local Market Expertise</h4>
+              <p>Deep roots in the Tirunelveli market give us unparalleled insight into pricing trends, growth corridors and investment hotspots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="sec-head-c">
+        <span class="sec-label">Client Stories</span>
+        <h2>Trusted by <em>1,200+ Families</em></h2>
+        <p>Their stories are our greatest achievement — and our strongest motivation to keep raising the bar.</p>
+      </div>
+      <div class="test-grid">
+
+        <div class="test-card">
+          <div class="tc-stars">★★★★★</div>
+          <p>"Meridian Realty made buying our first home entirely stress-free. They handled everything from shortlisting to registration. The team was responsive, honest and genuinely invested in finding us the right property — not just any property."</p>
+          <div class="tc-auth">
+            <div class="tc-av">SK</div>
+            <div>
+              <strong>Suresh & Kavitha Rajan</strong>
+              <span>Casa Veranda, Tirunelveli Town</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card test-feat">
+          <div class="tc-stars">★★★★★</div>
+          <p>"As an NRI looking to invest back home, I was sceptical about managing a purchase remotely. Meridian handled every detail with complete transparency — virtual tours, legal checks, registration — all without a single visit. Impeccable service."</p>
+          <div class="tc-auth">
+            <div class="tc-av">VN</div>
+            <div>
+              <strong>Vijay Narayanan</strong>
+              <span>NRI Investor, Dubai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="tc-stars">★★★★★</div>
+          <p>"I needed a commercial space for my law firm and had very specific requirements. Meridian's team listened patiently and found Commerce Park — the perfect location, right size and at a fair price. The legal documentation process was seamless."</p>
+          <div class="tc-auth">
+            <div class="tc-av">PM</div>
+            <div>
+              <strong>Prabhakaran Murugesh</strong>
+              <span>Commerce Park, Palayamkottai</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section class="section section-off">
+    <div class="container">
+      <div class="sec-head-c">
+        <span class="sec-label">How It Works</span>
+        <h2>Your Property Journey, <em>Step by Step</em></h2>
+      </div>
+      <div class="process-grid">
+        <div class="proc-step">
+          <div class="ps-num">01</div>
+          <h4>Free Consultation</h4>
+          <p>Begin with a no-obligation conversation. Tell us your requirements, budget and timeline — we listen first.</p>
+        </div>
+        <div class="proc-arrow">→</div>
+        <div class="proc-step">
+          <div class="ps-num">02</div>
+          <h4>Curated Shortlist</h4>
+          <p>We present a personally curated shortlist of properties matching your criteria — no wasted time, no mismatches.</p>
+        </div>
+        <div class="proc-arrow">→</div>
+        <div class="proc-step">
+          <div class="ps-num">03</div>
+          <h4>Site Visits & Due Diligence</h4>
+          <p>Accompanied site visits, thorough legal checks, title verification and negotiation support.</p>
+        </div>
+        <div class="proc-arrow">→</div>
+        <div class="proc-step">
+          <div class="ps-num">04</div>
+          <h4>Close & Hand Over</h4>
+          <p>From agreement drafting to registration day — we close the transaction and hand over the keys.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="sec-head-c">
+        <span class="sec-label">Get In Touch</span>
+        <h2>Start Your Property<br><em>Journey Today</em></h2>
+        <p>Whether you're buying your first home, selling a property or looking for investment advice — our experts are ready to help. Reach out for a free, no-obligation consultation.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-form-wrap">
+          <h3>Schedule a Consultation</h3>
+          <form id="contactForm">
+            <div class="frow">
+              <div class="fg">
+                <label>Full Name</label>
+                <input type="text" placeholder="Your full name" required>
+              </div>
+              <div class="fg">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 00000 00000" required>
+              </div>
+            </div>
+            <div class="fg">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com">
+            </div>
+            <div class="frow">
+              <div class="fg">
+                <label>I'm Looking To</label>
+                <select>
+                  <option value="">Select…</option>
+                  <option>Buy a Property</option>
+                  <option>Sell a Property</option>
+                  <option>Rent / Lease</option>
+                  <option>Invest in Real Estate</option>
+                  <option>Property Valuation</option>
+                  <option>NRI Services</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>Budget Range</label>
+                <select>
+                  <option value="">Select…</option>
+                  <option>Under ₹50 Lakhs</option>
+                  <option>₹50L – ₹1 Crore</option>
+                  <option>₹1 Cr – ₹2 Crore</option>
+                  <option>Above ₹2 Crore</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg">
+              <label>Message / Specific Requirements</label>
+              <textarea rows="4" placeholder="Describe the property you're looking for, or any specific requirements…"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Request Free Consultation →</button>
+          </form>
+          <div class="success-msg" id="successMsg" style="display:none">
+            <strong>Thank you!</strong> One of our consultants will call you within 2 business hours.
+          </div>
+        </div>
+        <div class="contact-side">
+          <div class="info-card">
+            <h4>Our Office</h4>
+            <div class="info-row">
+              <span><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="currentColor"/></svg></span>
+              <div>
+                <strong>Address</strong>
+                <p>6/A Matha Middle Street,<br>Tirunelveli Town – 627 006,<br>Tamil Nadu, India</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <span><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="currentColor"/></svg></span>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+919843471463">+91 98434 71463</a></p>
+              </div>
+            </div>
+            <div class="info-row">
+              <span><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg></span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:info@meridianrealty.in">info@meridianrealty.in</a></p>
+              </div>
+            </div>
+            <div class="info-row">
+              <span><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+              <div>
+                <strong>Working Hours</strong>
+                <p>Monday – Saturday: 9 AM – 7 PM<br>Sunday: 10 AM – 3 PM (by appt.)</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://maps.google.com/maps?q=Tirunelveli+Town,+Tamil+Nadu,+India+627006&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="290" style="border:0;display:block;" loading="lazy" title="Office Location"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="fl-mark">M</span>
+            <span>MERIDIAN <em>REALTY</em></span>
+          </a>
+          <p>Your trusted partner for residential, commercial and investment properties across Tirunelveli and surrounding districts. 12 years of integrity-driven service.</p>
+          <div class="f-socials">
+            <a href="#" class="fsoc" aria-label="Facebook">FB</a>
+            <a href="#" class="fsoc" aria-label="Instagram">IG</a>
+            <a href="#" class="fsoc" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+        <div class="fcol">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h4>Property Types</h4>
+          <ul>
+            <li><a href="#properties">Residential Villas</a></li>
+            <li><a href="#properties">Apartments</a></li>
+            <li><a href="#properties">Commercial Spaces</a></li>
+            <li><a href="#properties">Plots & Land</a></li>
+            <li><a href="#properties">NRI Investments</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h4>Contact Us</h4>
+          <address>
+            <p>6/A Matha Middle Street,</p>
+            <p>Tirunelveli Town – 627 006</p>
+            <p>Tamil Nadu, India</p>
+            <p><a href="tel:+919843471463">+91 98434 71463</a></p>
+            <p><a href="mailto:info@meridianrealty.in">info@meridianrealty.in</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bot-row">
+          <p>© <span id="year"></span> Meridian Realty. All Rights Reserved. RERA Registered.</p>
+          <a href="../../index.html" class="built">Built by <strong>Unova</strong></a>
+        </div>
+        <p class="disclaimer">⚠️ <strong>Demo Disclaimer:</strong> This is a sample website created by <a href="../../index.html">Unova</a> for portfolio and demonstration purposes only. Meridian Realty is a fictional brand. All properties, prices, testimonials and content shown are illustrative. No real estate transactions or services are offered through this website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btt" id="btt" aria-label="Back to top">↑</button>
+
+  <script>
+    // Navbar
+    const navbar = document.getElementById('navbar');
+    const btt = document.getElementById('btt');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      btt.classList.toggle('visible', window.scrollY > 500);
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    }));
+
+    // Back to top
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Contact form
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Property filter
+    function filterProps(btn, type) {
+      document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.prop-card').forEach(card => {
+        if (type === 'all' || card.dataset.type === type) {
+          card.style.display = '';
+          setTimeout(() => card.style.opacity = '1', 10);
+        } else {
+          card.style.opacity = '0.2';
+        }
+      });
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.prop-card, .svc-block, .test-card, .why-item, .proc-step').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
