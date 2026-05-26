@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -45,8 +48,8 @@
         Professional Web Solutions
       </div>
       <h1 class="hero-headline">
-        We Build Websites<br />
-        <span class="gradient-text">That Drive Results</span>
+        <div class="h1-line"><span>We Build&nbsp;Websites</span></div>
+        <div class="h1-line"><span class="gradient-text" id="rotPhrase">That Drive Results</span></div>
       </h1>
       <p class="hero-subtext">
         From e-commerce stores to dynamic web applications — Unova delivers
@@ -838,5 +841,6 @@
   </button>
 
   <script src="script.js"></script>
+  <script src="animations.js" defer></script>
 </body>
 </html>
