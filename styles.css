@@ -746,6 +746,8 @@ img { display: block; max-width: 100%; }
 .portfolio-img-5 { background: linear-gradient(135deg, #1a0a00 0%, #3d1a00 30%, #7c3b00 60%, #b45309 100%); }
 .portfolio-img-6 { background: linear-gradient(135deg, #0c1a0e 0%, #14532d 30%, #166534 60%, #15803d 100%); }
 .portfolio-img-7 { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 30%, #404040 60%, #525252 100%); }
+.portfolio-img-8 { background: linear-gradient(135deg, #0d1a0a 0%, #1a3518 30%, #2d5c38 60%, #4a7c50 100%); }
+.portfolio-img-9 { background: linear-gradient(135deg, #1c0e04 0%, #3d2008 30%, #6b3810 60%, #8b5020 100%); }
 
 /* Decorative browser chrome on each card */
 .portfolio-img::before {
